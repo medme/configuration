@@ -33,3 +33,7 @@ demo_edxapp_user: 'edxapp'
 demo_edxapp_venv_bin: '{{ COMMON_APP_DIR }}/{{ demo_edxapp_user }}/venvs/{{demo_edxapp_user}}/bin'
 demo_edxapp_course_data_dir: '{{ COMMON_DATA_DIR }}/{{ demo_edxapp_user }}/data'
 demo_edxapp_code_dir: '{{ COMMON_APP_DIR }}/{{ demo_edxapp_user }}/edx-platform'
+
+localdev_oauth2_clients:
+    - { name: "{{ ecommerce_service_name }}", url_root: "{{ ECOMMERCE_ECOMMERCE_URL_ROOT }}",
+        id: "{{ ECOMMERCE_SOCIAL_AUTH_EDX_OIDC_KEY }}", secret: "{{ ECOMMERCE_SOCIAL_AUTH_EDX_OIDC_SECRET }}" }
